@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+	<title>MediaMonks | The Path to Digital Enlightenment</title>
+	<link rel="icon" href="image/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/custom_styles.css">
+	<script src="js/custom_js.js"></script>
+</head>
+<body>
+
+	<!-- PAGE LOADER -->
+	<div class="pageLoader" id="pageLoader">
+		<div class="containerMonk">
+			<img src="image/monk.png" class="monk" alt="monk">
+		</div>
+		<p class="patience">Patience</p>
+		<p class="padawan">young padawan...</p>
+	</div>
+
+	<!-- END PAGE LOADER -->
+
+	<!-- SLIDE -->
+
+	<div class="container" >
+		<div class="paginatorL"></div>
+		<div class="paginatorR"></div>
+
+		<div class="page1">
+			<div class="content1">
+				<h1>we are breaking </h1>
+			</div>
+			<div class="content2">
+				<h1>our vow </h1>
+			</div>
+			<div class="content3">
+				<h1>of silence</h1>
+			</div>
+			<p class="description">In January 2011, after a decade of digital, we opened the doors to our temple. Follow our noble eightfold path to digital enlightement here.</p>
+
+		</div>
+
+		<img class="logo" src="image/mediamonks_logo_new.png" alt="media monks">
+		<ul>
+			<li></li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li></li>
+		</ul>
+	</div>
+
+	<!-- END SLIDE -->
+
+
+	<script>
+    var adblock;
+
+    // Function called if AdBlock is not detected
+    function adBlockNotDetected() {
+        adblock = 0;
+    }
+    // Function called if AdBlock is detected
+    function adBlockDetected() {
+        adblock = 1;
+    }
+    // Recommended audit because AdBlock lock the file 'fuckadblock.js' 
+    // If the file is not called, the variable does not exist 'fuckAdBlock'
+    // This means that AdBlock is present
+    if(typeof fuckAdBlock === 'undefined') {
+        adBlockDetected();
+    } else {
+        fuckAdBlock.onDetected(adBlockDetected);
+        fuckAdBlock.onNotDetected(adBlockNotDetected);
+        // and|or
+        fuckAdBlock.on(true, adBlockDetected);
+        fuckAdBlock.on(false, adBlockNotDetected);
+        // and|or
+        fuckAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
+    }
+
+    // Change the options
+    fuckAdBlock.setOption('checkOnLoad', false);
+    // and|or
+    fuckAdBlock.setOption({
+        debug: false,
+        checkOnLoad: true,
+        resetOnEnd: false
+    });
+</script>
+
+</body>
+</html>
+
+<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+-->
+
+<!-- never give up -->
