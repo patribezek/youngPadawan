@@ -1,0 +1,294 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,    
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+html, body{
+	height: 100%;
+}
+
+/* END RESET */
+
+/* FONTS */
+
+@font-face {
+	font-family: klavika-bold;
+	src: url('../font/klavika/klavika-bold-webfont.ttf') format('truetype'),
+	url('../font/klavika/klavika-bold-webfont.otf') format('otf'),
+	url('../font/klavika/klavika-bold-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: klavika-regular;
+	src: url('../font/klavika/klavika-regular-webfont.ttf') format('truetype'),
+	url('../font/klavika/klavika-regular-webfont.otf') format('otf'),
+	url('../font/klavika/klavika-regular-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: klavika-medium;
+	src: url('../font/klavika/klavika-medium-webfont.ttf') format('truetype'),
+	url('../font/klavika/klavika-medium-webfont.otf') format('otf'),
+	url('../font/klavika/klavika-medium-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: klavika-light;
+	src: url('../font/klavika/klavika-light-webfont.ttf') format('truetype'),
+	url('../font/klavika/klavika-light-webfont.otf') format('otf'),
+	url('../font/klavika/klavika-light-webfont.svg') format('svg');
+}
+
+body {
+	font-family: klavika-regular, sans-serif;
+	color:#fff;
+	background-color: #000;
+	overflow:hidden;
+}
+
+/* END FONTS */
+
+/* LOADER */
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 195% 0; }
+
+}
+
+.pageLoader {
+	background-image: url("../image/loaderbg.png");
+	width: 100%; 
+	height: 100%;  
+	background-position: 0px 0px;
+	background-repeat: repeat;
+	animation: animatedBackground 10s linear infinite;
+	-webkit-box-shadow: 0 0 120px 50px #000 inset;
+	-moz-box-shadow: 0 0 120px 50px #000 inset;
+	box-shadow: 0 0 120px 50px #000 inset;
+	z-index: 9999999;
+}
+
+@keyframes appear {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	100% {
+		width: 106px;
+		height: 149px;
+	}
+}
+
+@keyframes float {
+	0% {transform: translateY(-20px); }
+	50% { transform: translateY(0px);}
+	100% {transform: translateY(-20px); }
+}
+
+.containerMonk{
+	width: 100%;
+	height: 200px;
+	-webkit-filter: drop-shadow(0px -10px 50px #b5b5b5);
+	filter: drop-shadow(0px -10px 30px #b5b5b5);
+	transform: translateY(150%);
+}
+
+.monk {
+	vertical-align: middle;
+	z-index: 1;
+	display: block;
+	margin: auto;
+	animation: appear 2s, float 2s infinite;
+}
+
+.patience, .padawan {
+	font-family: klavika-regular;
+	font-style: italic;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+}
+
+
+.patience:after {
+	content: '! '; /*remember to change me!!!*/
+}
+
+@keyframes translate {
+	0% {transform: translateX(0); }
+	100% { transform: translateX(95px);}
+}
+.padawan {
+	animation: translate 1.6s;
+	transform: translateX(95px);
+	/*display: none;*/
+}
+
+/* END LOADER */
+
+/* SLIDE*/
+
+.container {
+	background-image: url("../image/background.jpg");
+	background-repeat: no-repeat;
+	width:13500px;
+	height: 100%;
+	position: absolute;
+}
+
+.paginatorL, .paginatorR {
+	background-size: 50px 50px;
+	/* display: inline-block; */
+	width: 40px;
+	height: 50px;
+	background-repeat: no-repeat;
+	content: "";
+	top: 40%;
+	position: fixed;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.paginatorL {
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE5Ny40MDIgMTk3LjQwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTk3LjQwMiAxOTcuNDAyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBvbHlnb24gcG9pbnRzPSIxNDYuODgzLDE5Ny40MDIgNDUuMjU1LDk4LjY5OCAxNDYuODgzLDAgMTUyLjE0OCw1LjQxOCA1Ni4xMDksOTguNjk4IDE1Mi4xNDgsMTkxLjk4ICAgICAgICAgIiBmaWxsPSIjRkZGRkZGIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	left: 30px;
+}
+
+.paginatorR {
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIyMy40MTMgMjIzLjQxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjIzLjQxMyAyMjMuNDEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI1NnB4IiBoZWlnaHQ9IjI1NnB4Ij4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBvbHlnb24gcG9pbnRzPSI1Ny4xNzksMjIzLjQxMyA1MS4yMjQsMjE3LjI3NiAxNTkuOTI1LDExMS43MSA1MS4yMjQsNi4xMjcgNTcuMTc5LDAgMTcyLjE4OSwxMTEuNzEgICAgICAgICAiIGZpbGw9IiNGRkZGRkYiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	right: 30px;
+}
+
+.paginatorL:hover{
+	opacity: 0.7;
+	left: 25px;
+}
+.paginatorR:hover{
+	opacity: 0.7;
+	right: 25px;
+}
+
+.logo {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 80px;
+}
+
+h1{
+	font-family: klavika-regular;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 3.8em;
+	margin: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+.content1, .content2, .content3 {  
+	margin-left: 30px;
+	height: auto;
+}
+
+.content1 {
+	width: 520px;
+	margin-top: 30px;
+}
+.content2 {
+	width: 280px;
+}
+.content3 {
+	width: 320px;
+}
+
+.description {
+	text-shadow: 1px 1px #000;
+	margin-left: 30px;
+	bottom: 14%;
+	position: absolute;
+	width: 470px;
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+li {
+	display: inline-block;
+	padding: 2px 10px;
+	border: 2px dotted #fff;
+	cursor: pointer;
+	font-size: 14px;
+	margin: 0 -3px;
+}
+
+li:first-child {
+	/*background-color: #fff;*/
+}
+
+ul{ 
+	margin-left: 30px;
+	bottom: 4%;
+	position: absolute;
+}
+
+/*@media (min-width: 768px ) {
+.container {
+	background-image: url("../image/background-mobile.jpg");
+ }
+}
+
+@media (min-width: 480px ) {
+h1{
+
+	font-size: 2.8em;
+	margin: 10px;
+
+}
+
+.content1, .content2, .content3 {  
+	margin-left: 20px;
+}
+
+.content1 {
+	width: 390px;
+	margin-top: 20px;
+}
+.content2 {
+	width: 210px;
+}
+.content3 {
+	width: 250px;
+}
+
+}*/
+
+/* END SLIDE*/
+
